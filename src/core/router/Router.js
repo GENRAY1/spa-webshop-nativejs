@@ -1,4 +1,4 @@
-import Page from "../page/Page";
+import Page from "../Page/Page";
 export default class Router{
     constructor(routes){
         this.routes = routes;
