@@ -9,11 +9,11 @@ import { routes } from "./routes";
 export function app(){
     const appElement = document.getElementById("app")
 
-    const layout = new Layout(appElement)
     const header = new Header()
     const main = new Main();
     const footer = new Footer();
-
+    
+    const layout = new Layout(appElement)
     layout.render(header,main,footer);
 
     const router = new Router(routes);
