@@ -32,16 +32,16 @@ export default class Component{
         if(options.params){
             this.addParams(element, options.params)
         }
+        if(options.childrens && options.childrens.length){
+            for(const children of options.childrens){
+                element.appendChild(children)
+            }
+        }
         if(options.components && options.components.length){
             for(const component of options.components){
                 if(component instanceof Component){
                     element.appendChild(component.create());
                 }
-            }
-        }
-        if(options.childrens && options.childrens.length){
-            for(const children of options.childrens){
-                element.appendChild(children)
             }
         }
         if(options.parent) options.parent.appendChild(element);
